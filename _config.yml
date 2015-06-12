@@ -1,0 +1,11 @@
+# Site settings
+title: lxkvlv
+email: lxkvlv@gmail.com
+description: "Presentation site Alexey Yakovlev"
+twitter_username: lxkvlv
+github_username:  lxkvlv
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
