@@ -1,17 +1,39 @@
- <!-- jQuery Version 1.11.0 -->
-    <script src="{{ "/js/jquery-1.11.0.js" | prepend: site.baseurl }}"></script>
-
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Jquery and Bootstrap JS -->
+    <script src="{{ "/js/vendor/jquery/jquery-1.11.2.min.js" | prepend: site.baseurl }}"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/css/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/cbpAnimatedHeader.js" | prepend: site.baseurl }}"></script>
+    <!-- Easing - for transitions and effects -->
+    <script src="{{ "/js/vendor/easing/jquery.easing.1.3.js" | prepend: site.baseurl }}"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="{{ "/js/jqBootstrapValidation.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/contact_me.js" | prepend: site.baseurl }}"></script>
+    <!-- background image strech script -->
+    <script src="{{ "/js/vendor/vegas/jquery.vegas.min.js" | prepend: site.baseurl }}"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="{{ "/js/freelancer.js" | prepend: site.baseurl }}"></script>
+    <!-- detect mobile browsers -->
+    <script src="{{ "/js/vendor/detectmobilebrowser/detectmobilebrowser.js" | prepend: site.baseurl }}"></script>
+
+    <!-- detect scrolling -->
+    <script src="{{ "/js/vendor/scrollstop/jquery.scrollstop.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- owl carousel js -->
+    <script src="{{ "/js/vendor/owl-carousel/owl.carousel.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- lightbox js -->
+    <script src="{{ "/js/vendor/lightbox/js/lightbox.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- intro animations -->
+    <script src="{{ "/js/vendor/wow/wow.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- responsive videos -->
+    <script src="{{ "/js/vendor/fitvids/jquery.fitvids.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Custom functions for this theme -->
+    <script src="{{ "/js/functions.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/initialise-functions.js" | prepend: site.baseurl }}"></script>
+
+    <!-- IE9 form fields placeholder fix -->
+    <!--[if lt IE 9]>
+    <script>contact_form_IE9_placeholder_fix();</script>
+    <![endif]-->

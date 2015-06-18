@@ -1,0 +1,14 @@
+---
+layout: default
+modal-id: 0
+date: 2014-07-15
+img: transp-image1.png
+alt: image-alt
+project-date: April 2014
+title: Заготовка тем для Bitrix
+category: repo
+git: repo
+description-short: Стартовая заготовка тем main и страницы 404.
+description-full: <p>Стартовая заготовка тем main и страницы 404. Используется Bootstrap (LESS), OpenSans, Fontello.</p><p>Стандартные компоненты Bitrix отверстаны под Bootstrap.</p>
+
+---

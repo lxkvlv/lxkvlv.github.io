@@ -1,0 +1,16 @@
+---
+layout: default
+modal-id: 3
+date: 2014-07-01
+img-preview: aquatech.png
+img1: submarine.jpg
+img2: submarine.jpg
+img3: submarine.jpg
+img4: submarine.jpg
+alt: vsemdostavka.ru
+project-date: April 2014
+category: project-new
+display: image
+title: sib-auqatech.ru
+description-short: Комплекс посадочных страниц для компании<br>LESS, Bootstrap
+---

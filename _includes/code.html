@@ -1,0 +1,66 @@
+{{ site.posts | sort: 'modal-id', 'last' }}
+          <article id="code" class="section-wrapper clearfix" data-custom-background-img="/img/bg/bg-code.jpg">
+            <div class="content-wrapper clearfix">
+              <h1 class="section-title">Код</h1>
+
+                <div id="features-carousel" class="carousel slide with-title-indicators max-height" data-height-percent="70" data-ride="carousel">
+
+                  <!-- Indicators - slide navigation -->
+                  <ol class="carousel-indicators title-indicators">
+                  {% for post in site.posts %}
+                  {% if post.category == "repo" %}
+                    {% if post.modal-id == 0 %}
+                      <li data-target="#features-carousel" data-slide-to="{{ post.modal-id }}" class="active">{{ post.title }}</li>
+                    {% else %}
+                      <li data-target="#features-carousel" data-slide-to="{{ post.modal-id }}">{{ post.title }}</li>
+                    {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    {% for post in site.posts %}
+                      {% if post.category == "repo" %}
+                      {% if post.modal-id == 0  %}
+                        <div class="item active">
+                          <div class="carousel-text-content">
+                            <img src="/img/{{ post.img }}" class="icon" alt="Lorem Ipsum">
+                            <h2 class="title">{{ post.title }}</h2>
+                            <p>{{ post.description-short }}</p>
+                            <p><a href="" onclick="populate_and_open_modal(event, 'modal-content-{{ post.modal-id }}');" class="btn btn-outline-inverse btn-sm">подробнее о репозитории</a></p>
+
+                            <div class="content-to-populate-in-modal" id="modal-content-{{ post.modal-id }}">
+                              <h1>{{ post.title }}</h1>
+                              {{ post.description-full }}
+                              <p><a href="{{ post.git }}" class="btn btn-outline-inverse btn-sm">на гитхаб</a></p>
+                            </div>
+                          </div>
+                        </div><!-- .item -->
+                      {% else %}
+                        <div class="item">
+                          <div class="carousel-text-content">
+                            <img src="/img/{{ post.img }}" class="icon" alt="Lorem Ipsum">
+                            <h2 class="title">{{ post.title }}</h2>
+                            <p>{{ post.description-short }}</p>
+                            <p><a href="" onclick="populate_and_open_modal(event, 'modal-content-{{ post.modal-id }}');" class="btn btn-outline-inverse btn-sm">подробнее о репозитории</a></p>
+
+                            <div class="content-to-populate-in-modal" id="modal-content-{{ post.modal-id }}">
+                              <h1>{{ post.title }}</h1>
+                              {{ post.description-full }}
+                              <p><a href="{{ post.git }}" class="btn btn-outline-inverse btn-sm">на гитхаб</a></p>
+                            </div>
+                          </div>
+                        </div><!-- .item -->
+                      {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                  </div><!-- .carousel-inner -->
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#features-carousel" data-slide="prev"></a>
+                  <a class="right carousel-control" href="#features-carousel" data-slide="next"></a>
+
+                </div><!-- #about-carousel -->
+
+            </div><!-- .content-wrapper -->
+          </article><!-- .section-wrapper -->

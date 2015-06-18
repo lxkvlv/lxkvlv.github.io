@@ -1,0 +1,14 @@
+---
+layout: default
+modal-id: 1
+date: 2014-07-01
+img: transp-image2.png
+alt: image-alt
+project-date: April 2014
+title: php_interface для Bitrix
+category: repo
+git: repo
+description-short: Часто используемые функции, агенты, обработчики событий.
+description-full: <p>Отправка почты с smtp авторизацией. Склонение слов, генерация случайной строки. Страница-заглушка.</p><p> По хандлерам смотрите комментарии в /include_init/handlers.php </p>
+
+---

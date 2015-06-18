@@ -1,0 +1,15 @@
+---
+layout: default
+modal-id: 4
+date: 2014-07-01
+img: submarine.png
+img-preview: submarine.jpg
+alt: image-alt
+project-date: April 2014
+title: Заготовка тем для Bitrix
+category: project-old
+display: image
+description-short: Стартовая заготовка тем main и страницы 404.
+description-full:  <p>Стартовая заготовка тем main и страницы 404. Используется bootstrap (LESS), OpenSans</p>
+
+---

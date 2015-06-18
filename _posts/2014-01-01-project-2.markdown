@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: 2
+date: 2014-07-01
+img-preview: vsemdostavka.png
+alt: vsemdostavka.ru
+project-date: April 2014
+category: project-new
+display: text
+title: vsemdostavka.ru
+description-short: Сервис заказов еды из ресторанов.<br> Курьерские услуги в городе.
+description-full: <p>Сервис заказов еды из ресторанов и заказа курьерских услуг в пределах города. Франшиза сервиса была продана в 20 городов РФ.</p><p>Для сервиса была также написана CRM система обработки заказов и ведение бухгалтерии.</p><p>Для рассчета расстояния и подбора адреса используется API Яндекс Карт</p>
+---

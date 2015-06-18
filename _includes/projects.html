@@ -1,0 +1,148 @@
+{{ site.posts | sort: 'modal-id', 'last' }}
+<article id="projects" class="section-wrapper clearfix" data-custom-background-img="/img/bg/bg-projects.jpg">
+  <div class="content-wrapper clearfix">
+    <div class="col-sm-11 pull-right">
+
+        <h1 class="section-title">Проекты</h1>
+
+        <!-- feature columns -->
+        <section class="feature-columns row clearfix">
+          {% for post in site.posts %}
+            {% if post.category == "project-new" %}
+              {% if post.display == "image" %}
+              <!-- feature 1 -->
+              <article class="feature-col col-md-4">
+                <a href="" onclick="populate_and_open_modal(event, 'modal-content-{{ post.modal-id }}');" class="thumbnail linked">
+                  <div class="image-container">
+                    <img data-img-src="/img/{{ post.img-preview }}" class="lazy item-thumbnail" alt="{{ post.alt }}">
+                  </div>
+                  <div class="caption">
+                    <h5>{{ post.title }}</h5>
+                    <p>{{ post.description-short }}</p>
+                  </div><!-- .caption -->
+                </a><!-- .thumbnail -->
+
+                <div class="content-to-populate-in-modal" id="modal-content-{{ post.modal-id }}">
+                  <h1>{{ post.title }}</h1>
+                  {{ post.description-full }}
+
+                  <!-- image slider inside popup -->
+                  <div id="unique-id-for-image-slider" class="owl-carousel popup-image-gallery">
+
+                    {% if post.img1 %}
+                    <!-- slide -->
+                    <div>
+                      <!-- caption is optional. To remove it, remove the <h6> below -->
+                      <h6 class="caption">{{ post.img1-title }}</h6>
+                      <img class="lazyOwl" data-src="/img/{{ post.img1 }}">
+                    </div>
+                    {% endif %}
+
+                    {% if post.img2 %}
+                    <!-- slide -->
+                    <div>
+                      <!-- caption is optional. To remove it, remove the <h6> below -->
+                      <h6 class="caption">{{ post.img2-title }}</h6>
+                      <img class="lazyOwl" data-src="/img/{{ post.img2 }}">
+                    </div>
+                    {% endif %}
+
+                    {% if post.img3 %}
+                    <!-- slide -->
+                    <div>
+                      <!-- caption is optional. To remove it, remove the <h6> below -->
+                      <h6 class="caption">{{ post.img3-title }}</h6>
+                      <img class="lazyOwl" data-src="/img/{{ post.img3 }}">
+                    </div>
+                    {% endif %}
+
+                    {% if post.img4 %}
+                    <!-- slide -->
+                    <div>
+                      <!-- caption is optional. To remove it, remove the <h6> below -->
+                      <h6 class="caption">{{ post.img4-title }}</h6>
+                      <img class="lazyOwl" data-src="/img/{{ post.img4 }}">
+                    </div>
+                    {% endif %}
+
+                    {% if post.img5 %}
+                    <!-- slide -->
+                    <div>
+                      <!-- caption is optional. To remove it, remove the <h6> below -->
+                      <h6 class="caption">{{ post.img5-title }}</h6>
+                      <img class="lazyOwl" data-src="/img/{{ post.img5 }}">
+                    </div>
+                    {% endif %}
+
+                    {% if post.img6 %}
+                    <!-- slide -->
+                    <div>
+                      <!-- caption is optional. To remove it, remove the <h6> below -->
+                      <h6 class="caption">{{ post.img6-title }}</h6>
+                      <img class="lazyOwl" data-src="/img/{{ post.img6 }}">
+                    </div>
+                    {% endif %}
+
+                  </div>
+                </div><!-- #modal-content-img -->
+              </article>
+              {% endif %}
+              {% if post.display == "text" %}
+              <!-- feature 2 -->
+              <article class="feature-col col-md-4">
+                <a href="" onclick="populate_and_open_modal(event, 'modal-content-{{ post.modal-id }}');" class="thumbnail linked">
+                  <div class="image-container">
+                    <img data-img-src="/img/{{ post.img-preview }}" class="lazy item-thumbnail" alt="{{ post.alt }}">
+                  </div>
+                  <div class="caption">
+                    <h5>{{ post.title }}</h5>
+                    <p>{{ post.description-short }}</p>
+                  </div><!-- .caption -->
+                </a><!-- .thumbnail -->
+
+                <div class="content-to-populate-in-modal" id="modal-content-{{ post.modal-id }}">
+                  {% if post.img %}
+                    <img data-img-src="/img/{{ post.img }}" class="lazy full-width" alt="{{ post.alt }}">
+                  {% endif %}
+                  <h1>{{ post.title }}</h1>
+                  {{ post.description-full }}
+                </div><!-- #modal-content-text -->
+              </article>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+          <!-- feature 3 -->
+          <article class="feature-col col-md-4">
+            <a href="" onclick="populate_and_open_modal(event, 'modal-content-old', '', 'full-size');" class="thumbnail linked">
+              <div class="image-container">
+                <img data-img-src="/img/transp-image5.png" class="lazy item-thumbnail" alt="Старые проекты">
+              </div>
+              <div class="caption">
+                <h5>Старые проекты</h5>
+                <p>Возможно неработающие, за которыми я перестал следить проекты.</p>
+              </div><!-- .caption -->
+            </a><!-- .thumbnail -->
+
+            <div class="content-to-populate-in-modal" id="modal-content-old">
+              <h1>Старые проекты</h1>
+              <p>Давно сделаны, сданы. Возможно работают, возможно нет - владельцы ко мне не обращались</p>
+
+              <!-- alt image slider inside popup -->
+              <div id="unique-id-for-alt-image-slider" class="owl-carousel popup-alt-image-gallery">
+                {% for post in site.posts %}
+                  {% if post.category == "project-old" %}
+                    <div class="item"><a href="/img/{{ post.img }}" data-lightbox="popup-alt-gallery" data-title="{{ post.title }}"><img class="lazyOwl" data-src="/img/{{ post.img-preview }}"></a></div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div><!-- #modal-content-8 -->
+          </article>
+
+        </section><!-- end: .feature-columns -->
+
+      <!-- End: Section content to edit -->
+
+    </div><!-- .col-sm-10 -->
+  </div><!-- .content-wrapper -->
+</article><!-- .section-wrapper -->

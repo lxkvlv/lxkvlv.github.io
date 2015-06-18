@@ -3,24 +3,29 @@
 
   {% include head.html %}
 
-    <body id="page-top" class="index">
+    <body data-default-background-img="/images/other_images/bg1.jpg" data-overlay="true" data-overlay-opacity="0.35">
+      <!-- Outer Container -->
+      <div id="outer-container">
+        {% include left_sidebar.html %}
+        <!--
+          <div class="page-content">
+            <div class="wrap">
+            {{ content }}
+            </div>
+          </div>
+        -->
+        <section id="main-content" class="clearfix">
+          {% include intro.html %}
+          {% include code.html %}
+          {% include projects.html %}
+          {% include contact.html %}
+        </section><!-- #main-content -->
 
-    {% include header.html %}
-    {% include portfolio_grid.html %}
-    {% include about.html %}
-    {% include contact.html %}
 
-
-    <!--
-      <div class="page-content">
-        <div class="wrap">
-        {{ content }}
-        </div>
-      </div>
-    -->
-
-    {% include footer.html %}
-    {% include modals.html %}
+        {% include footer.html %}
+      </div><!-- #outer-container -->
+      <!-- end: Outer Container -->
+      {% include modals.html %}
     {% include js.html %}
 
     </body>
